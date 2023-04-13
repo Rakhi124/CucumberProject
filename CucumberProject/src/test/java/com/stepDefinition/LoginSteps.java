@@ -22,12 +22,12 @@ public class LoginSteps {
 		driver.get("https://www.saucedemo.com/");
 	}
 
-	@When("user enter username and password")
-	public void user_enter_username_and_password() {
+	@When("^user enter (.*) and (.*)$")
+	public void user_enter_username_and_password(String uname,String pswd) {
 		System.out.println("Step2:User enters username and Password");
 		//driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys("Admin");
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		driver.findElement(By.id("user-name")).sendKeys(uname);
+		driver.findElement(By.id("password")).sendKeys(pswd);
 		
 	}
 

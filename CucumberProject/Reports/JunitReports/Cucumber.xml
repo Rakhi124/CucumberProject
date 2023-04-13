@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.87" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login" time="2.714">
+<testsuite name="Cucumber" time="4.676" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - Example #1.1" time="2.707">
 <system-out><![CDATA[
 Given user is on login page.................................................passed
-When user enter username and password.......................................passed
+When user enter standard_user and secret_sauce..............................passed
+And click on login button...................................................passed
+Then user should land on login page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - Example #1.2" time="1.803">
+<system-out><![CDATA[
+Given user is on login page.................................................passed
+When user enter locked_out_user and secret_sauce............................passed
 And click on login button...................................................passed
 Then user should land on login page.........................................passed
 ]]></system-out>
